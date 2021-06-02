@@ -28,6 +28,5 @@ class MoviesViewModel : ViewModel() {
 
 sealed class UiState {
     data class Success(val movies: List<Movie>) : UiState()
-    data class Error(val exception: Throwable) : UiState()
     object Loading : UiState()
 }

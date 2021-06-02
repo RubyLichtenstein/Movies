@@ -1,4 +1,4 @@
-package com.example.movies.ui.movies
+package com.example.movies.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -44,10 +44,6 @@ class MoviesFragment : Fragment() {
                     is UiState.Success -> {
                         binding.loading.visibility = View.INVISIBLE
                         adapter.submitList(uiState.movies)
-                    }
-                    is UiState.Error -> {
-                        binding.loading.visibility = View.INVISIBLE
-                        // todo add error ui
                     }
                     UiState.Loading -> {
                         binding.loading.visibility = View.VISIBLE

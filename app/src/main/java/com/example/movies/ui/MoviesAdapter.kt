@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.movies.ui.movies
+package com.example.movies.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -29,9 +29,7 @@ import com.example.movies.databinding.ListItemMovieBinding
 class MoviesAdapter(val onClickMovie: (Movie) -> Unit) :
     ListAdapter<Movie, MoviesAdapter.MovieViewHolder>(MoviesDiffCallback()) {
 
-    // Create new views (invoked by the layout manager)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
-        // Create a new view, which defines the UI of the list item
         return MovieViewHolder(
             ListItemMovieBinding.inflate(
                 LayoutInflater.from(parent.context),
